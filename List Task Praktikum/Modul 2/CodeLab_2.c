@@ -7,8 +7,8 @@ int main() {
 bool flagTrue = true;
 bool flagFalse = false;
 printf("Boolean values demonstration:\n");
-printf("flagTrue: %d\n", flagTrue);
-printf("flagFalse: %d\n", flagFalse);
+printf("flagTrue: %d\n", true);
+printf("flagFalse: %d\n", false);
 // String operations
 char greeting[] = "Hello, World!";
 char copyGreeting[20];
