@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
-mAt
+
 int main() {
 // Boolean values
 bool flagTrue = true;
