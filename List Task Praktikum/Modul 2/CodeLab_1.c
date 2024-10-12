@@ -7,24 +7,26 @@ int main(){
     int Kalori_Pertama, Kalori_Kedua, Kalori_Ketiga, Total_Kalori;
     const int Batas_Harian = 2500;
     
-    
-    printf("Masukkan kalori makanan pertama = ");
+    // Input
+    printf("Masukkan kalori makanan pertama : ");
     scanf("%d", &Kalori_Pertama);
 
-    printf("Masukkan kalori makanan pertama = ");
+    printf("Masukkan kalori makanan pertama : ");
     scanf("%d", &Kalori_Kedua);
 
-    printf("Masukkan kalori makanan pertama = ");
+    printf("Masukkan kalori makanan pertama : ");
     scanf("%d", &Kalori_Ketiga);
 
+    // Proses
     Total_Kalori = Kalori_Pertama + Kalori_Kedua + Kalori_Ketiga;
 
-    printf("\nTotal Kalori = %d \n", Total_Kalori);
+    // Output
+    printf("\nTotal Kalori : %d \n", Total_Kalori);
     if (!(Total_Kalori > Batas_Harian)) {
         printf("Total Kalori tidak melebihi batas harian.");
     } else {
         printf("Total Kalori melebihi batas harian.");
     }
     
-
+    return 0;
 }
