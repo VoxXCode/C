@@ -1,22 +1,30 @@
 #include <stdio.h>
-#define Pi 3.14159 // Constants 
+// #define Pi 3.14159 // Constants 
 
 int main () {
-    int Jari_jari;
+    float Jari_jari;
+    const double Pi = 3.14159; // Constants
 
-    printf("===== Menghitung Luas dan Keliling Lingkaran ==== \n");
+    printf("===== Menghitung Luas dan Keliling Lingkaran ===== \n");
 
     // Input
     printf("Masukkan Jari-jari Lingkaran : ");
-    scanf("%d", &Jari_jari);
+    scanf("%f", &Jari_jari);
 
     // Proses 
-    float Luas_Lingkarang = Pi * Jari_jari * Jari_jari;
-    float Keliling_Lingkarang = 2 * Pi * Jari_jari;
+    // float Luas_Lingkarang = Pi * Jari_jari * Jari_jari;
+    // float Keliling_Lingkarang = 2 * Pi * Jari_jari;
 
+    double Luas_Lingkaran = Pi * Jari_jari * Jari_jari;
+    double Keliling_Lingkaran = 2 * Pi * Jari_jari;
+    
     // Output
-    printf("\nLuas Lingkaran : %.2f \n", Luas_Lingkarang);
-    printf("Keliling Lingkaran : %.2f", Keliling_Lingkarang);
+    if (Jari_jari > 0) {
+        printf("\nLuas Lingkaran : %.2f \n", Luas_Lingkaran);
+        printf("Keliling Lingkaran : %.2f", Keliling_Lingkaran);
+    } else {
+        printf("Error");
+    }
 
     return 0;
 }

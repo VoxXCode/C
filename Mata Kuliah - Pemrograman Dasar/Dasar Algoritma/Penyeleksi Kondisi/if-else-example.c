@@ -125,4 +125,5 @@ int main () {
     } else {
             printf("Pesanan anda tidak dapat diproses, silakan lakukan pemesanan ulang.");
         }
+    return 0;
 }
