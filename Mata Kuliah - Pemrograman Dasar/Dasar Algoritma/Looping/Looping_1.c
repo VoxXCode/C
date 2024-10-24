@@ -9,12 +9,7 @@ int main () {
         printf("%d \t", a);
         a += b; // Output a dari hasil sebelumnya + variable b
         
-        
-         
-        
-        
     }
-
     
     return 0;
 }
