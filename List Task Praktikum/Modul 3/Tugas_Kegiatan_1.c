@@ -629,7 +629,7 @@ int main () {
     int Order_Film, Order_Tiket, Bayar;
     char Member;
 
-    enum Film Harga_Film;
+    enum Film List_Film;
     enum Jenis_Tiket Tiket;
 
     printf("======== Bioskop ========\n");
@@ -645,15 +645,15 @@ int main () {
     scanf("%d", &Order_Film);
 
     switch (Order_Film) {
-        case 1: Harga_Film = Spiderman;
+        case 1: List_Film = Spiderman;
             break;
-        case 2: Harga_Film = Batman;
+        case 2: List_Film = Batman;
             break;
-        case 3: Harga_Film = Superman;
+        case 3: List_Film = Superman;
             break;
-        case 4: Harga_Film = Avengers;
+        case 4: List_Film = Avengers;
             break;
-        case 5: Harga_Film = Joker;
+        case 5: List_Film = Joker;
             break;
         default:
             printf("Film tidak tersedia.");
@@ -683,7 +683,7 @@ int main () {
     printf("\nApakah Anda adalah member? (Y/N) : ");
     scanf(" %c", &Member);
     if (Member == 'y' || Member == 'Y') {
-        double Member_Total = Harga_Film + Tiket;
+        double Member_Total = List_Film + Tiket;
         double Total = Member_Total - 0.10 * Member_Total;
         printf("Total Harga : %.2f \n", Total);
         printf("Alamat Memori variable : %p \n", &Total);
@@ -701,9 +701,9 @@ int main () {
             printf("Uang anda Kurang.");
         }
     } else if (Member == 'n' || Member == 'N') {
-        double Total = Harga_Film + Tiket;
-        printf("Total Harga : %.2f", Total);
-        printf("Alamat Memori variable : %p", &Total);
+        double Total = List_Film + Tiket;
+        printf("Total Harga : %.2f \n", Total);
+        printf("Alamat Memori variable : %p \n", &Total);
 
         printf("Masukkan Pembayaran : ");
         scanf("%d", &Bayar);
