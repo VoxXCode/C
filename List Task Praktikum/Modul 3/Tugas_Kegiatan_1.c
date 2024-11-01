@@ -630,7 +630,7 @@ int main () {
     char Member;
 
     enum Film List_Film; // Mewakili variable Enum Film menggunakan variable List_Film
-    enum Jenis_Tiket Tiket; // Mewakili variable Enum Jenis_Tiket menggunakan varible Tiket
+    enum Jenis_Tiket Tiket; // Mewakili variable Enum Jenis_Tiket menggunakan variable Tiket
 
     printf("======== Bioskop ========\n");
 
