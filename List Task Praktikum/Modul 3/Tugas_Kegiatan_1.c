@@ -629,8 +629,8 @@ int main () {
     int Order_Film, Order_Tiket, Bayar;
     char Member;
 
-    enum Film List_Film;
-    enum Jenis_Tiket Tiket;
+    enum Film List_Film; // Mewakili variable Enum Film menggunakan variable List_Film
+    enum Jenis_Tiket Tiket; // Mewakili variable Enum Jenis_Tiket menggunakan varible Tiket
 
     printf("======== Bioskop ========\n");
 
@@ -645,15 +645,20 @@ int main () {
     scanf("%d", &Order_Film);
 
     switch (Order_Film) {
-        case 1: List_Film = Spiderman;
+        case 1: 
+            List_Film = Spiderman;
             break;
-        case 2: List_Film = Batman;
+        case 2: 
+            List_Film = Batman;
             break;
-        case 3: List_Film = Superman;
+        case 3: 
+            List_Film = Superman;
             break;
-        case 4: List_Film = Avengers;
+        case 4: 
+            List_Film = Avengers;
             break;
-        case 5: List_Film = Joker;
+        case 5: 
+            List_Film = Joker;
             break;
         default:
             printf("Film tidak tersedia.");
@@ -669,11 +674,14 @@ int main () {
     scanf("%d", &Order_Tiket);
 
     switch (Order_Tiket) {
-        case 1: Tiket = Reguler;
+        case 1: 
+            Tiket = Reguler;
             break;
-        case 2: Tiket = VIP;
+        case 2: 
+            Tiket = VIP;
             break;
-        case 3: Tiket = VVIP;
+        case 3: 
+            Tiket = VVIP;
             break;
         default:
             printf("Jenis tiket tidak tersedia.");
