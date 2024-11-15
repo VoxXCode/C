@@ -2,33 +2,39 @@
 #include <string.h>
 
 int main() {
-    char Input[50];  // Menyediakan buffer untuk string yang dimasukkan
+    char str[100];
+    int i, j;
+    int length;
 
-    printf("===== Program Mencari Karakter Unik dalam String =====\n");
+    // Input string dari pengguna
+    printf("Masukkan string: ");
+    fgets(str, sizeof(str), stdin);
+    
+    // Menghapus karakter newline (\n) dari input string
+    length = strlen(str);
+    if (str[length - 1] == '\n') {
+        str[length - 1] = '\0';
+    }
 
-    // Meminta pengguna untuk memasukkan sebuah string
-    printf("Masukkan sebuah string : ");
-    fgets(Input, sizeof(Input), stdin);  // Menggunakan fgets untuk membaca input string
-
-    // Menghapus karakter newline yang mungkin ada di akhir input
-    Input[strcspn(Input, "\n")] = '\0';
-
-    // Array untuk menyimpan karakter yang sudah dicetak sebelumnya
-    int isPrinted[256] = {0};  // Asumsi karakter dalam ASCII (256 karakter)
-
-    // Memeriksa setiap karakter dalam string
-    for (int i = 0; Input[i] != '\0'; i++) {
-        // Jika karakter sudah dicetak sebelumnya, lompat ke iterasi berikutnya
-        if (isPrinted[(unsigned char)Input[i]] == 1) {
-            continue;  // Lompat ke iterasi berikutnya
+    // Mencetak karakter unik
+    for (i = 0; i < length; i++) {
+        // Lewati jika karakter sudah ada sebelumnya
+        int is_unique = 1;
+        
+        // Cek apakah karakter str[i] sudah muncul sebelumnya
+        for (j = 0; j < i; j++) {
+            if (str[i] == str[j]) {
+                is_unique = 0;
+                break;
+            }
         }
 
-        // Cetak karakter yang belum dicetak
-        printf("%c", Input[i]);
-        
-        // Tandai karakter tersebut sebagai sudah dicetak
-        isPrinted[(unsigned char)Input[i]] = 1;
+        // Jika karakter unik, cetak dan lanjutkan
+        if (is_unique) {
+            printf("%c ", str[i]);
+        }
     }
+    printf("\n");
 
     return 0;
 }

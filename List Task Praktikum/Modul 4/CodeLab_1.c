@@ -23,7 +23,7 @@ int main() {
     }
 
     // Menghitung rata-rata
-    if (Total > 0) {
+    if (Total_Input > 0) {
         
         double Rata_Rata = (double)Jumlah_Bilangan / Total_Input;
         printf("\nTotal bilangan : %d\n", Jumlah_Bilangan);
