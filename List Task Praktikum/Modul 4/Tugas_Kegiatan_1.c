@@ -4,7 +4,7 @@ int main() {
     int input, total, lanjut;
 
     do { 
-        total = 0; // Inisialisasi ulang total setiap kali memulai siklus transaksi baru
+        total = 0; // Inisialisasi ulang total setiap kali memulai transaksi baru
         printf("=== Pencatatan Transaksi === \n");
         printf("Masukkan transaksi selanjutnya (gunakan 0 untuk menyelesaikan):\n");
 
