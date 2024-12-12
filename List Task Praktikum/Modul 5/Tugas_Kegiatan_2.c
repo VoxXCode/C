@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 int main() {
@@ -10,33 +11,33 @@ int main() {
     scanf("%d", &jumlahMahasiswa);
     
     // Membuat array multidimensi untuk menyimpan nilai ujian setiap mahasiswa
-    float nilai[jumlahMahasiswa][3];
+    float arrNilai[jumlahMahasiswa][3];
     
     // Input nilai ujian untuk setiap mahasiswa
     for (i = 0; i < jumlahMahasiswa; i++) {
         printf("\nMasukkan nilai untuk mahasiswa %d:\n", i + 1);
         printf("Nilai Matematika: ");
-        scanf("%f", &nilai[i][0]);
+        scanf("%f", &arrNilai[i][0]);
         printf("Nilai Fisika: ");
-        scanf("%f", &nilai[i][1]);
+        scanf("%f", &arrNilai[i][1]);
         printf("Nilai Kimia: ");
-        scanf("%f", &nilai[i][2]);
+        scanf("%f", &arrNilai[i][2]);
     }
     
     // Menampilkan header tabel
     printf("\nTabel Nilai Ujian\n");
-    printf("Mahasiswa  Matematika  Fisika  Kimia \n");
+    printf("Mahasiswa  Matematika  Fisika   Kimia \n");
 
     // Menampilkan nilai per mahasiswa dan menghitung total nilai
     for (i = 0; i < jumlahMahasiswa; i++) {
-        float rataRata = (nilai[i][0] + nilai[i][1] + nilai[i][2]) / 3.0;
+        float rataRata = (arrNilai[i][0] + arrNilai[i][1] + arrNilai[i][2]) / 3.0;
         
-        printf("Mhs %2d     %.2f      %.2f    %.2f   \n", 
-                i + 1, nilai[i][0], nilai[i][1], nilai[i][2]);
+        printf("Mhs %2d     %.2f       %.2f    %.2f   \n", 
+                i + 1, arrNilai[i][0], arrNilai[i][1], arrNilai[i][2]);
         
-        totalMatematika += nilai[i][0];
-        totalFisika += nilai[i][1];
-        totalKimia += nilai[i][2];
+        totalMatematika += arrNilai[i][0];
+        totalFisika += arrNilai[i][1];
+        totalKimia += arrNilai[i][2];
         totalKeseluruhan += rataRata;
     }
 
