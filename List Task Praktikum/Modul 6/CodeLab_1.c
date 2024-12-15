@@ -23,21 +23,21 @@ int Fibonacci(int n) {
 int main() {
     int angka, i;
 
-    // Input angka untuk faktorial
+    // Meminta input angka dari pengguna untuk menghitung faktorial
     printf("Masukkan angka untuk menghitung faktorial: ");
     scanf("%d", &angka);
     
-    // Menghitung dan menampilkan faktorial
+    // Menghitung dan menampilkan hasil faktorial dari angka yang dimasukkan
     printf("Faktorial dari %d adalah %d\n", angka, Faktorial(angka));
 
-    // Input angka untuk deret Fibonacci
+    // Meminta input angka dari pengguna untuk menentukan jumlah suku deret Fibonacci
     printf("Masukkan jumlah suku deret Fibonacci yang diinginkan: ");
     scanf("%d", &angka);
 
-    // Menampilkan deret Fibonacci
+    // Menampilkan deret Fibonacci sesuai dengan jumlah suku yang diminta
     printf("Deret Fibonacci hingga suku ke-%d: ", angka);
     for (i = 0; i < angka; i++) {
-        printf("%d ", Fibonacci(i));
+        printf("%d ", Fibonacci(i));  // Memanggil fungsi Fibonacci untuk tiap suku
     }
     printf("\n");
 
